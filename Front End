@@ -1,0 +1,35 @@
+from SharepointListBackend import *
+from tkinter import *
+
+window = Tk()
+window.title("Sharepoint App")
+
+canvas = Canvas(window, width=125, height=125)
+canvas.grid(columnspan=1, rowspan=4)
+
+l1 = Label(window, text="Add Rows:")
+l1.grid(row=0, column=0)
+
+l2 = Label(window, text="Delete Rows:")
+l2.grid(row=1, column=0)
+
+l3 = Label(window, text="Create new List:")
+l3.grid(row=2, column=0)
+
+l4 = Label(window, text="Close:")
+l4.grid(row=3, column=0)
+
+b1 = Button(window, text="Press to add rows", width=19, command=AddData)
+b1.grid(row=0, column=1)
+
+b2 = Button(window, text="Press to delete rows", width=19, command=DeleteData)
+b2.grid(row=1, column=1)
+
+b3 = Button(window, text="Press to create a new list", width=19, command=AddList)
+b3.grid(row=2, column=1)
+
+b4 = Button(window, text="Press to close application", width=19, command=window.destroy)
+b4.grid(row=3, column=1)
+
+
+window.mainloop()
