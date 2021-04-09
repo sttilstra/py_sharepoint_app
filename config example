@@ -1,0 +1,6 @@
+{
+	"username": "user@domain.com",
+	"password": "password",
+	"root_site": "https://rootsite.sharepoint.com/",
+	"specific_site": "https://rootsite.sharepoint.com/sites/spefic_site/"
+}
