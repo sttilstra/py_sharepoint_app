@@ -21,7 +21,7 @@ def AddData():
     authcookie = Office365(ROOT_SITE, username=USERNAME, password=PASSWORD).GetCookies()
     site = Site(SPECIFIC_SITE, authcookie=authcookie)
 
-    sp_list = site.List("Seth's Testing List")
+    sp_list = site.List("ListName")
 
     new_rows = []
 
@@ -65,9 +65,9 @@ def DeleteData():
     authcookie = Office365(ROOT_SITE, username=USERNAME, password=PASSWORD).GetCookies()
     site = Site(SPECIFIC_SITE, authcookie=authcookie)
 
-    sp_list = site.List("Seth's Testing List")
+    sp_list = site.List("ListName")
 
-    # this line gets items from the sharepoint list with a 4K limit. Sharepoint has a data limit for rows returned.
+    # this line gets items from the sharepoint list with a 4K limit. Sharepoint has a 5k data limit for rows returned.
     # data = sp_list.GetListItems()
     data = sp_list.GetListItems(row_limit=4000)
 
